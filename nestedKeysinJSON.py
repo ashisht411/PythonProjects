@@ -11,11 +11,14 @@ def extract_nested_keys(data, parent_key=""):
     return keys
 
 def get_nested_keys_from_json_file(file_path):
-  with open(file_path, "r") as file:
-    data = json.load(file)
-
-  nested_keys = extract_nested_keys(data)
-  return nested_keys
+    try:
+        with open(file_path, "r") as file:
+            data = json.load(file)
+        nested_keys = extract_nested_keys(data)
+    except FileNotFoundError:
+        print(f"Error: The file {file_path} was not found.")
+        nested_keys = []
+    return nested_keys
 
 filepath = "happy.json"
 print(get_nested_keys_from_json_file(filepath))
