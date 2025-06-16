@@ -1,0 +1,12 @@
+{
+  "name": "Ashish",
+  "location": {
+    "city": "Delhi",
+    "state": "Delhi",
+    "coordinates": {
+      "lat": 28.61,
+      "long": 77.23
+    }
+  },
+  "skills": ["Python", "SQL"]
+}
