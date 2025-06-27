@@ -14,4 +14,4 @@ df = pd.DataFrame({
     "Sales": np.round(np.random.uniform(10.0, 500.0, size=num_rows), 2)
 })
 
-df.to_csv("performancememoryopti/filename.csv", index=False)
+df.to_csv("filename.csv", index=False)
